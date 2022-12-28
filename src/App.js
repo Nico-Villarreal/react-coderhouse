@@ -3,23 +3,25 @@ import LogoApp from './components/LogoApp';
 import NavBar from './components/NavBar';
 import CarWidget from './components/CarWidget';
 import ItemListContainer from './components/ItemListContainer'
+import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
   return (
-    <body >
+      <>      
       <header className="App-header">
         <LogoApp />
         <NavBar />
         <CarWidget />
       </header>
+  
       <main className='mx-5 my-3 '>
         <h1 >
           E-commerce de Armas de Aire Comprimido
         </h1>
-        <section className='d-flex gap-5 justify-content-center mt-5'>
+        <section className='d-flex gap-5 justify-content-center m-5'>
 
           <ItemListContainer 
           arma="HK-USP"
@@ -55,9 +57,10 @@ function App() {
         </section>
       </main>
       <footer>  
-        
+        <Footer/>
       </footer>
-    </body>
+      </>
+
   );
 }
 
