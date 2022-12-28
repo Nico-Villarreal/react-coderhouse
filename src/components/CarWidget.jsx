@@ -1,13 +1,13 @@
-const Checkout = () =>{
+const CarWidget = () =>{
     return(
-        <div>
+        <div className="bg-white px-2 py-1 rounded-2" >
             <img src="https://raw.githubusercontent.com/Nico-Villarreal/JavaScript-Coderhosue/main/img/carrito.webp" alt="logo-carrito" />
-            <span>
-                1
+            <span >
+                01
             </span>
         </div>
 
     );
 };
 
-export default Checkout;
+export default CarWidget;

@@ -1,3 +1,7 @@
+.body{
+  background-image: "https://raw.githubusercontent.com/Nico-Villarreal/Armas-Airsoft/master/img/fondo-2.webp";
+}
+
 .App {
   text-align: center;
 }
@@ -9,6 +13,6 @@
   align-items: center;
   justify-content:space-between;
   font-size: 1.5rem;
-  padding: 0rem 1.5rem;
-
+  padding: 1.5rem;
 }
+
