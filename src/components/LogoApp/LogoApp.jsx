@@ -1,4 +1,4 @@
-import "../css/LogoApp.css"
+import "../LogoApp/LogoApp.css"
 
 const LogoApp = () =>{
     return(
@@ -9,3 +9,4 @@ const LogoApp = () =>{
 };
 
 export default LogoApp;
+

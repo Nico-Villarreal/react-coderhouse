@@ -1,7 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Counter from '../counterButton/Counter';
 
 function CardItem({arma, precio, imagen, description}) {
+
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={imagen} />
@@ -10,7 +12,13 @@ function CardItem({arma, precio, imagen, description}) {
         <Card.Text>
             {description}
         </Card.Text>
-        <Button variant="primary">${precio}</Button>
+        <div>
+          <Counter/>
+        </div>
+        <div>
+          <Button className='mt-2'>Add to Cart</Button>
+        </div>
+        <Button variant="primary" className='mt-3'>${precio}</Button>
       </Card.Body>
     </Card>
   );
