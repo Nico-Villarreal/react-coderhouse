@@ -3,12 +3,13 @@ import LogoApp from "./components/LogoApp/LogoApp";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <header className="App-header">
         <LogoApp />
         <NavBar />
@@ -51,7 +52,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </BrowserRouter>
   );
 }
 

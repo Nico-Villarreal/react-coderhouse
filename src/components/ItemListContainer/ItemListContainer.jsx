@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Counter from '../counterButton/Counter';
+import Counter from '../Counter/Counter';
 
 function CardItem({arma, precio, imagen, description}) {
 
