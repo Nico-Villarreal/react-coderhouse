@@ -1,9 +1,10 @@
 import "../LogoApp/LogoApp.css"
+import Logo from "./logoStore.png"
 
 const LogoApp = () =>{
     return(
-        <div>
-            <img className="rounded-2" src="https://raw.githubusercontent.com/Nico-Villarreal/JavaScript-Coderhosue/main/img/logo-1.webp" alt="logo-ecomerce" />
+        <div className="w-50" >
+            <img className="rounded-4" src={Logo} alt="logo-ecomerce" />
         </div>
     );
 };
