@@ -1,34 +1,13 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Counter from "../Counter/Counter";
-import { Link } from "react-router-dom";
+import ProductDetail from "../ProductDetail/ProductDetail";
+import "./ItemDetailContainer.css";
 
-function CardItem({ productItem }) {
+function CardItem({ productos }) {
   return (
-    <div className="d-flex m-3">
-      <Card style={{ width: "100%" }} className="p-3">
-        <Card.Img
-          src={productItem.image}
-          className="h-25 border border-dark rounded p-1"
-        />
-        <Card.Body className="text-center d-flex flex-column justify-content-center">
-          <Card.Title>{productItem.title}</Card.Title>
-          <div className="my-3">
-            <Counter />
-          </div>
-          <div>
-            <Button className="mt-2">Add to Cart</Button>
-          </div>
-          <Button variant="primary" className="mt-3">
-            ${productItem.price}
-          </Button>
-          <Link to="Item">
-            <Button className="mt-3">CLICK AQUI - Mas Info</Button>
-          </Link>
-        </Card.Body>
-      </Card>
+    <div className="detail">
+      {productos.map((products) => (
+        <ProductDetail key={products.id} products={products} />
+      ))}
     </div>
   );
 }
-
 export default CardItem;

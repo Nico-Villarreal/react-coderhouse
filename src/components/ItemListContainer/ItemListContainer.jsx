@@ -1,30 +1,24 @@
 import { useEffect, useState } from "react";
-import "./ItemListContainer.css";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
-const Home = () => {
+const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
 
-  const getProducts = fetch("https://fakestoreapi.com/products", {
-    method: "GET",
-  });
   useEffect(() => {
+    const getProducts = fetch("https://fakestoreapi.com/products");
     getProducts
       .then((resp) => resp.json())
       .then((data) => {
         setProductList(data);
-        console.log(data);
       })
       .catch((error) => console.log(error));
   }, []);
 
   return (
-    <div className="home m-5">
-      {productList.map((product) => (
-        <ItemDetailContainer key={product.id} productItem={product} />
-      ))}
+    <div className="m-5">
+      <ItemDetailContainer productos={productList} />
     </div>
   );
 };
 
-export default Home;
+export default ItemListContainer;

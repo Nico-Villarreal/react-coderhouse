@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: "https://raw.githubusercontent.com/Nico-Villarreal/Armas-Airsoft/master/img/fondo-2.webp";
 }
 
 code {
