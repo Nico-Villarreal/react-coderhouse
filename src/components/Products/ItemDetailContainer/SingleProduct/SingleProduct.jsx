@@ -12,8 +12,8 @@ const SingleProduct = ({product}) => {
           className="h-50 border border-dark rounded p-1"
         />
         <Card.Body className="text-center d-flex flex-column justify-content-center">
-          <Card.Title>{product.title}</Card.Title>
-          <Card.Text>{product.description}</Card.Text>
+          <Card.Title className="fs-2">{product.title}</Card.Title>
+          <Card.Text className="fw-bolder">{product.description}</Card.Text>
           <div className="my-3">
             <Counter />
           </div>

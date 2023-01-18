@@ -1,4 +1,6 @@
 import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import LogoApp from "../LogoApp/LogoApp";
 
@@ -8,47 +10,82 @@ function NavBar() {
       <div className="me-5">
         <LogoApp />
       </div>
-      <Nav variant="pills" className=" ">
+      <Nav variant="pills" className="fw-bolder">
         <div className="d-flex gap-3 mx-5">
           <Nav.Item>
-            <Nav.Link
-              href="index.html"
-              className="mx-2 text-white border-white border-2"
-            >
+            <NavLink className="mx-2 text-white border-white border-2" to="/">
               Home
-            </Nav.Link>
+            </NavLink>
           </Nav.Item>
+          <NavDropdown title="Catalogo" id="nav-dropdown">
+            <NavDropdown.Item>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="/catalogo"
+              >
+                Todo
+              </NavLink>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="catalogo/men's clothing"
+              >
+                Hombre
+              </NavLink>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="catalogo/women's clothing"
+              >
+                Mujer
+              </NavLink>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="catalogo/jewelery"
+              >
+                Joyas
+              </NavLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to="catalogo/electronics"
+              >
+                Tecnologia
+              </NavLink>
+            </NavDropdown.Item>
+          </NavDropdown>
+
           <Nav.Item>
-            <Nav.Link
-              href=" "
+            <NavLink
               className="mx-2 text-white border-white border-2"
-            >
-              Catalogo
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link
-              href=" "
-              className="mx-2 text-white border-white border-2"
+              to="/contacto"
             >
               Contacto
-            </Nav.Link>
+            </NavLink>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link
-              href=" "
+            <NavLink
               className="mx-2 text-white border-white border-2"
+              to="/ayuda"
             >
               Ayuda
-            </Nav.Link>
+            </NavLink>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link
-              href=" "
+            <NavLink
               className="mx-2 text-white border-white border-2"
+              to="/encontranos"
             >
               Encontranos
-            </Nav.Link>
+            </NavLink>
           </Nav.Item>
         </div>
       </Nav>
@@ -60,3 +97,5 @@ function NavBar() {
 }
 
 export default NavBar;
+
+//className="mx-2 text-white border-white border-2"

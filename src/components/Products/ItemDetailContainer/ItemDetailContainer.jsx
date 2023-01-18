@@ -6,7 +6,6 @@ const ItemDetailContainer = () => {
   const [singleProduct, setSingleProduct] = useState({});
   const {id} = useParams();
  
- 
   //fetch para llamar a un solo producto de la API
 
   useEffect(() => {

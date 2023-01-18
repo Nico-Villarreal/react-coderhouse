@@ -1,9 +1,11 @@
-
+import ItemListContainer from "../components/Products/ItemListContainer/ItemListContainer"
 
 
 const Catalogo = () => {
   return (
-    <div>Catalogo</div>
+    <div>
+      <ItemListContainer/>
+    </div>
   )
 }
 
