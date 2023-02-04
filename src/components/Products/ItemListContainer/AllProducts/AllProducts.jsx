@@ -1,7 +1,6 @@
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Counter from "../../../Counter/Counter";
 
 const AllProducts = ({ allProducts }) => {
   return (
@@ -13,12 +12,6 @@ const AllProducts = ({ allProducts }) => {
         />
         <Card.Body className="text-center d-flex flex-column justify-content-center">
           <Card.Title>{allProducts.title}</Card.Title>
-          <div className="my-3">
-            <Counter />
-          </div>
-          <div>
-            <Button className="mt-2">Add to Cart</Button>
-          </div>
           <Button variant="primary" className="mt-3">
             ${allProducts.price}
           </Button>
