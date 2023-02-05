@@ -1,6 +1,6 @@
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import LogoApp from "../LogoApp/LogoApp";
 
@@ -30,7 +30,7 @@ function NavBar() {
             <NavDropdown.Item>
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="catalogo/men's clothing"
+                to="catalogo/hombre"
               >
                 Hombre
               </NavLink>
@@ -39,7 +39,7 @@ function NavBar() {
             <NavDropdown.Item>
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="catalogo/women's clothing"
+                to="catalogo/mujer"
               >
                 Mujer
               </NavLink>
@@ -48,7 +48,7 @@ function NavBar() {
             <NavDropdown.Item>
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="catalogo/jewelery"
+                to="catalogo/joyas"
               >
                 Joyas
               </NavLink>
@@ -56,7 +56,7 @@ function NavBar() {
             <NavDropdown.Item>
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
-                to="catalogo/electronics"
+                to="catalogo/computacion"
               >
                 Tecnologia
               </NavLink>
@@ -90,7 +90,9 @@ function NavBar() {
         </div>
       </Nav>
       <div className="ms-5">
-        <CartWidget />
+        <Link to={`/cart`}>
+          <CartWidget />
+        </Link>
       </div>
     </div>
   );

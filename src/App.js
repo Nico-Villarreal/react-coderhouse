@@ -16,6 +16,7 @@ import Contacto from "./pages/Contacto";
 import Ayuda from "./pages/Ayuda";
 import Encontranos from "./pages/Encontranos";
 import Error from "./pages/Error";
+import Cart from "./pages/Cart";
 
 //react router from pages
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -36,6 +37,7 @@ function App() {
           <Route path="encontranos" element={<Encontranos />} />
           <Route path="catalogo/:category" element={<ItemListContainer />} />
           <Route path="catalogo/item/:id" element={<ItemDetailContainer />} />
+          <Route path="cart" element={<Cart/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -7,7 +7,7 @@ const AllProducts = ({ allProducts }) => {
     <div className="d-flex m-3 border border-dark rounded">
       <Card style={{ width: "100%" }} className="p-3">
         <Card.Img
-          src={allProducts.image}
+          src={allProducts.imageId}
           className="h-50 border border-dark rounded p-1"
         />
         <Card.Body className="text-center d-flex flex-column justify-content-center">
