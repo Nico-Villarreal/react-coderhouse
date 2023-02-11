@@ -158,12 +158,7 @@ const Cart = () => {
         ))}
         <div className="d-flex justify-content-center">
           <div>
-            <button onClick={
-              
-              
-              
-              
-              clear} className="rounded fw-bolder mt-3 p-3 bg-warning text-dark">
+            <button onClick={ clear} className="rounded fw-bolder mt-3 p-3 bg-warning text-dark">
               Vaciar Carrito
             </button>
           </div>
