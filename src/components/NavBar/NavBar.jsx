@@ -8,7 +8,9 @@ function NavBar() {
   return (
     <div className="d-flex justify-content-between aling-items-center">
       <div className="me-5">
-        <LogoApp />
+        <NavLink to="/catalogo">
+          <LogoApp />
+        </NavLink>
       </div>
       <Nav variant="pills" className="fw-bolder">
         <div className="d-flex gap-3 mx-5">

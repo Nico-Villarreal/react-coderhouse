@@ -46,9 +46,9 @@ const ItemListContainer = () => {
 
   
   return (
-    <div className=" m-5 bg-secondary bg-opacity-50 rounded p-3">
+    <div className=" m-5 bg-secondary bg-opacity-50 rounded p-3 border border-dark border-3">
       <h1 className="text-center m-5">Catalogo de Productos</h1>
-      <div className="detail">
+      <div className="detail ">
         {productList.map((allProducts) => (
           <AllProducts key={allProducts.id} allProducts={allProducts} />
         ))}

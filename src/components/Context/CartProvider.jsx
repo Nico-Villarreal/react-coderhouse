@@ -20,10 +20,10 @@ const CartProvider = ({ children }) => {
         id: item.id,
         name: item.title,
         price: item.price,
+        description: item.description,
         quantity: quantity,
-        imageId: item.imageId,
-        category: item.categoryId,
         image: item.imageId,
+        category: item.categoryId,
         stock: item.stock
       };
       newCart = [...cart, product];

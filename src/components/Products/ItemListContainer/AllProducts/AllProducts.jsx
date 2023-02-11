@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const AllProducts = ({ allProducts }) => {
   return (
-    <div className="d-flex m-3 border border-dark rounded">
+    <div className="d-flex m-3 border border-dark border-3 rounded">
       <Card style={{ width: "100%" }} className="p-3">
         <Card.Img
           src={allProducts.imageId}

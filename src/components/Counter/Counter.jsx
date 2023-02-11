@@ -1,7 +1,13 @@
+import Swal from "sweetalert2";
+
 const Counter = ({ counter, setCounter, stock }) => {
   const onAdd = () => {
     if (stock === counter) {
-      alert("No hay mas productos en stock");
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'No hay mas productos en stock!',
+      })
       return;
     }
     setCounter(counter + 1);
