@@ -124,10 +124,10 @@ const Cart = () => {
                 <h2 className="m-5 text-center">{product.quantity} </h2>
               </td>
               <td>
-                <h2 className="m-5 text-center">{product.price} </h2>
+                <h2 className="m-5 text-center">{"$"+ product.price} </h2>
               </td>
               <td>
-                <h2 className="m-5 text-center">{product.price * product.quantity}</h2>
+                <h2 className="m-5 text-center">{"$"+ product.price * product.quantity}</h2>
               </td>
               <td>
                 <button onClick={() => 
@@ -146,8 +146,7 @@ const Cart = () => {
                         'Tu carrito se encuentra vacio',
                         'success'
                       )
-                      deleteItem(product.id)
-                    }
+                      deleteItem(product.id)}
                   })} 
                   
                   className="rounded fw-bolder h-50 p-3 m-5 bg-danger text-white">

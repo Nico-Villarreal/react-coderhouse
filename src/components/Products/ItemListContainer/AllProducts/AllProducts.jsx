@@ -10,7 +10,7 @@ const AllProducts = ({ allProducts }) => {
           src={allProducts.imageId}
           className="h-50 border border-dark rounded p-1"
         />
-        <Card.Body className="text-center d-flex flex-column justify-content-center">
+        <Card.Body className="text-center d-flex flex-column justify-content-center border-top border-dark mt-4">
           <Card.Title>{allProducts.title}</Card.Title>
           <Button variant="primary" className="mt-3">
             ${allProducts.price}
